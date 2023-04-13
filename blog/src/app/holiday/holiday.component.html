@@ -1,0 +1,19 @@
+<p>hotel works!</p>
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>NAME</td>
+            <td>ABOUT</td>
+            <td>TYPE</td>
+        </tr>
+    </thead>
+    <tbody *ngFor="let product of items">
+        <tr>
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.about}}</td>
+            <td>{{product.type}}</td>
+        </tr>
+    </tbody>
+</table>

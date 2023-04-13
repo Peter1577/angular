@@ -1,0 +1,25 @@
+<p>skins works!</p>
+<table class="table table-primary">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>MODEL</td>
+            <td>COLOR</td>
+            <td>PRICE</td>
+            <td>TYPE</td>
+            <td>VIEW</td>
+        </tr>
+    </thead>
+    <tbody *ngFor="let skin of products">
+        <tr>
+            <td>{{skin.id}}</td>
+            <td>{{skin.model}}</td>
+            <td>{{skin.color}}</td>
+            <td>{{skin.price}}</td>
+            <td>{{skin.type}}</td>
+            <td>
+                <a [routerLink] = '["../skins",skin.id]'>click here</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

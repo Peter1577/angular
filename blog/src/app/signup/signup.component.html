@@ -1,0 +1,35 @@
+<form [formGroup]="signup" (ngSubmit)="Signup()">
+  <input
+    type="text"
+    name="Fname"
+    placeholder="enter First Name"
+    formControlName="Fname"
+  />
+  <br />
+  <span style="color:red" *ngIf="Fname && Fname.invalid && Fname.touched"> invalid field</span>
+  <br />
+  <input
+    type="text"
+    name="Lname"
+    placeholder="enter Last Name"
+    formControlName="Lname"
+  /><br />
+  <span style="color:red" *ngIf="Lname && Lname.invalid && Lname.touched"> invalid</span>
+  <br />
+  <input
+    type="email"
+    name="Email"
+    placeholder="enter Email"
+    formControlName="Email"
+  /><br />
+  <span style="color:red" *ngIf="Email && Email.invalid && Email.touched">invaid Email</span><br />
+  <input
+    type="number"
+    name="Mnumber"
+    placeholder="enter mobile number"
+    formControlName="Mnumber"
+  /><br />
+  <span style="color:red" *ngIf="Mnumber && Mnumber.invalid && Mnumber.touched"></span>
+  <br />
+  <button [disabled]="signup.invalid" >Signup</button>
+</form>

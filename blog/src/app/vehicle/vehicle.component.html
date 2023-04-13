@@ -1,0 +1,20 @@
+<table class="table table-success">
+    <thead>
+        <tr>
+            <td>VEHICLE_NUMBER</td>
+            <td>TYPE</td>
+            <td>COLOR</td>
+            <td>VIEW</td>
+        </tr>
+    </thead>
+    <tbody *ngFor="let vehicle of vehicles">
+        <tr>
+            <td>{{vehicle.id}}</td>
+            <td>{{vehicle.type}}</td>
+            <td>{{vehicle.color}}</td>
+            <td>
+                <a [routerLink] = "['../vehicle',vehicle.id]">more</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

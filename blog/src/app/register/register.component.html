@@ -1,0 +1,20 @@
+<form [formGroup]="Registration" (ngSubmit)="Register()">
+ <label >First Name :</label>   &nbsp;
+<input type="text" name="Fname" placeholder="enter First name" formControlName="Fname"> &nbsp; &nbsp;
+<span style="color: red;" *ngIf="Fname && Fname.invalid && Fname.touched">invalid fied</span>
+<label >Last Name :</label>   &nbsp;
+<input type="text" name="Lname" placeholder="enter Last name" formControlName="Lname"> 
+<span style="color: red;" *ngIf="Lname && Lname.invalid && Lname.touched">invalid fied</span> <br><br>
+<label > Email :</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="Email" name="Email" placeholder="example@some.com" formControlName="Email"> &nbsp;
+<span style="color: red;" *ngIf="Email && Email.invalid && Email.touched">invalid fied</span>&nbsp;&nbsp;
+<label > Mobile :</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="number" name="Mnum" placeholder="mobile number" formControlName="Mnum"> 
+<span style="color: red;" *ngIf="Mnum && Mnum.invalid && Mnum.touched">invalid fied</span> <br><br>
+<label >Pasword :</label> &nbsp;&nbsp;&nbsp;&nbsp;
+<input type="password" name="password" placeholder="Password" formControlName="password">
+ <br><br>
+ <span style="color: red;" *ngIf="password && password.invalid && password.touched">invalid fied</span><br><br>
+<button [disabled]="Registration.invalid">Registe here</button>
+
+</form>

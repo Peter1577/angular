@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+        <tr>
+            <td class="table-dark">ID</td>
+            <td class="table-dark">MODEL</td>
+            <td class="table-dark">PRICE</td>
+            <td class="table-dark">TYPE</td>
+            <td class="table-dark">VIEW</td>
+        </tr>
+    </thead>
+    <tbody *ngFor="let mobile of products">
+        <tr class="table-secondary">
+        <td class="table-secondary">{{mobile.id}}</td>
+        <td class="table-secondary">{{mobile.model}}</td>
+        <td class="table-secondary">{{mobile.price}}</td>
+        <td class="table-secondary">{{mobile.type}}</td>
+        <td class="table-secondary">
+        <a [routerLink] = '["../mobile",mobile.model]'>click me</a>
+        </td>
+        </tr>    
+    </tbody>
+</table>

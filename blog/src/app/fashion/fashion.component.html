@@ -1,0 +1,22 @@
+<p>fashion works!</p>
+
+<table class="table table-danger">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>BRAND</td>
+            <td>TYPE</td>
+            <td>VIEW</td>
+        </tr>
+    </thead>
+    <tbody *ngFor="let fashion of fashions" >
+        <tr>
+            <td>{{fashion.id}}</td>
+            <td>{{fashion.brand}}</td>
+            <td>{{fashion.type}}</td>
+            <td>
+                <a [routerLink] = "['../fashion',fashion.id]">click me</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

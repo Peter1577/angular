@@ -1,0 +1,21 @@
+<form #loginform="ngForm" (ngSubmit)="usersignin(loginform.value)">
+  <input type="text" placeholder="Enter name" name="name" ngModel> <br><br>
+  <input type="password" placeholder="Enter Password" name="password" ngModel> <br><br>
+  <button>Signin</button>
+</form><br><br>
+
+<form #newform="ngForm" (ngSubmit)="submitone(newform.value)">
+  <input type="text" name="name" placeholder="name" ngModel><br><br>
+  <textarea name="comment" ngModel>Enter text here...</textarea><br><br>
+  <button>submit</button>
+</form><br><br>
+
+<form #thirdform="ngForm" (ngSubmit)="submittwo(thirdform.value)">
+  <input type="text" placeholder=" First name" name="fname" ngModel>&nbsp;&nbsp;
+  <input type="text" placeholder=" Last name" name="lname" ngModel> <br> <br><br>
+  <input type="email" placeholder="Email" name="email" ngModel><br><br>
+  <textarea name="comment"  ngModel></textarea><br><br>
+  <button formtarget="_self">submit</button>
+</form>
+
+<div id="div1"></div>

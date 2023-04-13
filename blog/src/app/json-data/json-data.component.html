@@ -1,0 +1,41 @@
+<table class="table table-primary">
+    <thead>
+        <tr class="table-dark">
+            <td>ID</td>
+            <td>NAME</td>
+            <td>USER NAME</td>
+            <td>EMAIL</td>
+            
+        </tr>
+    </thead>
+    <tbody *ngFor="let details of data">
+        <tr>
+            <td>{{details.id}}</td>
+            <td>{{details.name}}</td>
+            <td>{{details.username}}</td>
+            <td>{{details.email}}</td>
+            
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-primary">
+    <thead>
+        <tr class="table-dark">
+            <td>USER ID</td>
+            <td>ID</td>
+            <td>TITLE</td>
+            <td>COMPLETED</td>
+        </tr>
+    </thead>
+    <tbody *ngFor="let deatails1 of data2">
+
+        <tr>
+            <td>{{deatails1.userId}}</td>
+            <td>{{deatails1.id}}</td>
+            <td>{{deatails1.title}}</td>
+            <td>{{deatails1.completed}}</td>
+        </tr>
+
+    </tbody>
+</table>

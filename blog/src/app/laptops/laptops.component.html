@@ -1,0 +1,23 @@
+<p>laptops works!</p>
+<table class="table">
+    <thead>
+        <tr>
+            <td class="table-dark">ID</td>
+            <td class="table-dark">MODEL</td>
+            <td class="table-dark">PRICE</td>
+            <td class="table-dark">TYPE</td>
+            <td class="table-dark">VIEW</td>
+        </tr>
+    </thead>
+    <tbody *ngFor="let user of products">
+        <tr>
+            <td class="table-primary">{{user.id}}</td>
+            <td class="table-secondary">{{user.model}}</td>
+            <td class="table-success">{{user.price}}</td>
+            <td class="table-success">{{user.type}}</td>
+            <td class="table-secondary">
+                <a [routerLink] = "['../laptop',user.id]">click me</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,24 @@
+<p>bluetooths works!</p>
+<table class="table table-primary">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>MODEL</td>
+            <td>PRICE</td>
+            <td>TYPE</td>
+            <td>VIEW</td>
+        </tr>
+    </thead>
+    <tbody *ngFor="let bluetooths of products">
+        <tr>
+            <td>{{bluetooths.id}}</td>
+            <td>{{bluetooths.model}}</td>
+            <td>{{bluetooths.price}}</td>
+            <td>{{bluetooths.type}}</td>
+            <td>
+                <a [routerLink] = "['../bluetooth', bluetooths.id]">click me</a>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
